@@ -1,0 +1,7 @@
+commitmsg
+mc-*
+mock_build.log
+mock_srpm.log
+results
+testresults
+used_libs
