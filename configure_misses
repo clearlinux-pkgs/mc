@@ -4,6 +4,7 @@ Configure miss: whether gcc accepts -Wmissing-variable-declarations
 Configure miss: konqueror
 Configure miss: CHECK
 Configure miss: slang/slang.h
+Configure miss: X
 Configure miss: statlstat
 Configure miss: get_process_stats in -lseq
 Configure miss: sys/fs_types.h usability
@@ -40,6 +41,5 @@ Configure miss: struct statvfs.f_fstypename
 Configure miss: struct statvfs.f_type
 Configure miss: AIX defines
 Configure miss: Gpm_Repeat in -lgpm
-Configure miss: LIBSSH
 Configure miss: x86_64-generic-linux-gnu-doxygen
 Configure miss: x86_64-generic-linux-gnu-perl

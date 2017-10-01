@@ -4,7 +4,7 @@
 #
 Name     : mc
 Version  : 4.8.19
-Release  : 6
+Release  : 7
 URL      : http://ftp.midnight-commander.org/mc-4.8.19.tar.bz2
 Source0  : http://ftp.midnight-commander.org/mc-4.8.19.tar.bz2
 Summary  : Testing
@@ -17,8 +17,7 @@ Requires: mc-doc
 BuildRequires : bison
 BuildRequires : check
 BuildRequires : glib-dev
-BuildRequires : pkgconfig(ice)
-BuildRequires : pkgconfig(x11)
+BuildRequires : libssh2-dev
 BuildRequires : slang-dev
 
 %description
@@ -68,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1506872185
+export SOURCE_DATE_EPOCH=1506872474
 %configure --disable-static PYTHON=/usr/bin/python3
 make V=1  %{?_smp_mflags}
 
@@ -80,7 +79,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1506872185
+export SOURCE_DATE_EPOCH=1506872474
 rm -rf %{buildroot}
 %make_install
 %find_lang mc
