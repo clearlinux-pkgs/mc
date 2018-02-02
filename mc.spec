@@ -4,7 +4,7 @@
 #
 Name     : mc
 Version  : 4.8.20
-Release  : 9
+Release  : 10
 URL      : http://ftp.midnight-commander.org/mc-4.8.20.tar.bz2
 Source0  : http://ftp.midnight-commander.org/mc-4.8.20.tar.bz2
 Summary  : Testing
