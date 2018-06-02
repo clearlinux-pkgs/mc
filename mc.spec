@@ -4,7 +4,7 @@
 #
 Name     : mc
 Version  : 4.8.20
-Release  : 12
+Release  : 13
 URL      : http://ftp.midnight-commander.org/mc-4.8.20.tar.bz2
 Source0  : http://ftp.midnight-commander.org/mc-4.8.20.tar.bz2
 Summary  : Testing
@@ -12,8 +12,8 @@ Group    : Development/Tools
 License  : GPL-3.0 MIT
 Requires: mc-bin
 Requires: mc-locales
+Requires: mc-man
 Requires: mc-data
-Requires: mc-doc
 BuildRequires : bison
 BuildRequires : check
 BuildRequires : glib-dev
@@ -30,6 +30,7 @@ with "double", 'single quotes', and $weird | \characters i\n = i\\t, empty line.
 Summary: bin components for the mc package.
 Group: Binaries
 Requires: mc-data
+Requires: mc-man
 
 %description bin
 bin components for the mc package.
@@ -43,20 +44,20 @@ Group: Data
 data components for the mc package.
 
 
-%package doc
-Summary: doc components for the mc package.
-Group: Documentation
-
-%description doc
-doc components for the mc package.
-
-
 %package locales
 Summary: locales components for the mc package.
 Group: Default
 
 %description locales
 locales components for the mc package.
+
+
+%package man
+Summary: man components for the mc package.
+Group: Default
+
+%description man
+man components for the mc package.
 
 
 %prep
@@ -67,8 +68,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1511716753
-%configure --disable-static PYTHON=/usr/bin/python3
+export SOURCE_DATE_EPOCH=1527953782
+%configure --disable-static --sysconfdir=/usr/shar/defaults/mc \
+PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}
 
 %check
@@ -79,13 +81,22 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1511716753
+export SOURCE_DATE_EPOCH=1527953782
 rm -rf %{buildroot}
 %make_install
 %find_lang mc
 
 %files
 %defattr(-,root,root,-)
+/usr/shar/defaults/mc/mc/edit.indent.rc
+/usr/shar/defaults/mc/mc/filehighlight.ini
+/usr/shar/defaults/mc/mc/mc.default.keymap
+/usr/shar/defaults/mc/mc/mc.emacs.keymap
+/usr/shar/defaults/mc/mc/mc.ext
+/usr/shar/defaults/mc/mc/mc.keymap
+/usr/shar/defaults/mc/mc/mc.menu
+/usr/shar/defaults/mc/mc/mcedit.menu
+/usr/shar/defaults/mc/mc/sfs.ini
 
 %files bin
 %defattr(-,root,root,-)
@@ -162,12 +173,6 @@ rm -rf %{buildroot}
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/man/es/man1/mc.1
-/usr/share/man/hu/man1/mc.1
-/usr/share/man/it/man1/mc.1
-/usr/share/man/pl/man1/mc.1
-/usr/share/man/ru/man1/mc.1
-/usr/share/man/sr/man1/mc.1
 /usr/share/mc/examples/macros.d/macro.0.sh
 /usr/share/mc/examples/macros.d/macro.1.sh
 /usr/share/mc/examples/macros.d/macro.3.sh
@@ -350,9 +355,17 @@ rm -rf %{buildroot}
 /usr/share/mc/syntax/yum-repo.syntax
 /usr/share/mc/syntax/yxx.syntax
 
-%files doc
+%files man
 %defattr(-,root,root,-)
-%doc /usr/share/man/man1/*
+/usr/share/man/es/man1/mc.1
+/usr/share/man/hu/man1/mc.1
+/usr/share/man/it/man1/mc.1
+/usr/share/man/man1/mc.1
+/usr/share/man/man1/mcedit.1
+/usr/share/man/man1/mcview.1
+/usr/share/man/pl/man1/mc.1
+/usr/share/man/ru/man1/mc.1
+/usr/share/man/sr/man1/mc.1
 
 %files locales -f mc.lang
 %defattr(-,root,root,-)

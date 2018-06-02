@@ -14,14 +14,12 @@ Configure miss: OS.h usability
 Configure miss: OS.h presence
 Configure miss: OS.h
 Configure miss: listmntent
-Configure miss: sys/ucred.h
 Configure miss: struct fsstat.f_fstypename
 Configure miss: listmntent of Cray/Unicos-9
 Configure miss: mntctl function and struct vmount
 Configure miss: sys/mntent.h usability
 Configure miss: sys/mntent.h presence
 Configure miss: sys/mntent.h
-Configure miss: struct statfs.f_fstypename
 Configure miss: whether to use statvfs64
 Configure miss: dustat.h usability
 Configure miss: dustat.h presence
@@ -36,10 +34,6 @@ Configure miss: statfs that truncates block counts
 Configure miss: nfs/vfs.h usability
 Configure miss: nfs/vfs.h presence
 Configure miss: nfs/vfs.h
-Configure miss: struct statvfs.f_basetype
-Configure miss: struct statvfs.f_fstypename
 Configure miss: struct statvfs.f_type
 Configure miss: AIX defines
 Configure miss: Gpm_Repeat in -lgpm
-Configure miss: x86_64-generic-linux-gnu-doxygen
-Configure miss: x86_64-generic-linux-gnu-perl
