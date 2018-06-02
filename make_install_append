@@ -1,0 +1,2 @@
+mkdir -p %{buildroot}/usr/share
+mv %{buildroot}/etc/mc/* %{buildroot}/usr/share/mc/

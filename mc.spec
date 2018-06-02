@@ -4,7 +4,7 @@
 #
 Name     : mc
 Version  : 4.8.20
-Release  : 13
+Release  : 16
 URL      : http://ftp.midnight-commander.org/mc-4.8.20.tar.bz2
 Source0  : http://ftp.midnight-commander.org/mc-4.8.20.tar.bz2
 Summary  : Testing
@@ -16,6 +16,7 @@ Requires: mc-man
 Requires: mc-data
 BuildRequires : bison
 BuildRequires : check
+BuildRequires : flex
 BuildRequires : glib-dev
 BuildRequires : libssh2-dev
 BuildRequires : slang-dev
@@ -68,9 +69,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1527953782
-%configure --disable-static --sysconfdir=/usr/shar/defaults/mc \
-PYTHON=/usr/bin/python3
+export SOURCE_DATE_EPOCH=1527954824
+%configure --disable-static PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}
 
 %check
@@ -81,22 +81,17 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1527953782
+export SOURCE_DATE_EPOCH=1527954824
 rm -rf %{buildroot}
 %make_install
 %find_lang mc
+## make_install_append content
+mkdir -p %{buildroot}/usr/share
+mv %{buildroot}/etc/mc/* %{buildroot}/usr/share/mc/
+## make_install_append end
 
 %files
 %defattr(-,root,root,-)
-/usr/shar/defaults/mc/mc/edit.indent.rc
-/usr/shar/defaults/mc/mc/filehighlight.ini
-/usr/shar/defaults/mc/mc/mc.default.keymap
-/usr/shar/defaults/mc/mc/mc.emacs.keymap
-/usr/shar/defaults/mc/mc/mc.ext
-/usr/shar/defaults/mc/mc/mc.keymap
-/usr/shar/defaults/mc/mc/mc.menu
-/usr/shar/defaults/mc/mc/mcedit.menu
-/usr/shar/defaults/mc/mc/sfs.ini
 
 %files bin
 %defattr(-,root,root,-)
@@ -173,6 +168,7 @@ rm -rf %{buildroot}
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/mc/edit.indent.rc
 /usr/share/mc/examples/macros.d/macro.0.sh
 /usr/share/mc/examples/macros.d/macro.1.sh
 /usr/share/mc/examples/macros.d/macro.3.sh
@@ -180,6 +176,7 @@ rm -rf %{buildroot}
 /usr/share/mc/examples/macros.d/macro.5.sh
 /usr/share/mc/examples/macros.d/macro.6.sh
 /usr/share/mc/examples/macros.d/macro.7.sh
+/usr/share/mc/filehighlight.ini
 /usr/share/mc/help/mc.hlp
 /usr/share/mc/help/mc.hlp.es
 /usr/share/mc/help/mc.hlp.hu
@@ -239,7 +236,14 @@ rm -rf %{buildroot}
 /usr/share/mc/hints/mc.hint.zh
 /usr/share/mc/hints/mc.hint.zh_CN
 /usr/share/mc/mc.charsets
+/usr/share/mc/mc.default.keymap
+/usr/share/mc/mc.emacs.keymap
+/usr/share/mc/mc.ext
+/usr/share/mc/mc.keymap
 /usr/share/mc/mc.lib
+/usr/share/mc/mc.menu
+/usr/share/mc/mcedit.menu
+/usr/share/mc/sfs.ini
 /usr/share/mc/skins/dark.ini
 /usr/share/mc/skins/darkfar.ini
 /usr/share/mc/skins/default.ini
