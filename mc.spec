@@ -4,7 +4,7 @@
 #
 Name     : mc
 Version  : 4.8.20
-Release  : 17
+Release  : 18
 URL      : http://ftp.midnight-commander.org/mc-4.8.20.tar.bz2
 Source0  : http://ftp.midnight-commander.org/mc-4.8.20.tar.bz2
 Summary  : Testing
@@ -45,6 +45,14 @@ Group: Data
 data components for the mc package.
 
 
+%package extras
+Summary: extras components for the mc package.
+Group: Default
+
+%description extras
+extras components for the mc package.
+
+
 %package locales
 Summary: locales components for the mc package.
 Group: Default
@@ -69,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528014178
+export SOURCE_DATE_EPOCH=1528014340
 %configure --disable-static PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}
 
@@ -81,7 +89,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1528014178
+export SOURCE_DATE_EPOCH=1528014340
 rm -rf %{buildroot}
 %make_install
 %find_lang mc
@@ -95,6 +103,8 @@ mv %{buildroot}/etc/mc/* %{buildroot}/usr/share/mc/
 
 %files bin
 %defattr(-,root,root,-)
+%exclude /usr/libexec/mc/extfs.d/s3+
+%exclude /usr/libexec/mc/extfs.d/uc1541
 /usr/bin/mc
 /usr/bin/mcdiff
 /usr/bin/mcedit
@@ -129,7 +139,6 @@ mv %{buildroot}/etc/mc/* %{buildroot}/usr/share/mc/
 /usr/libexec/mc/extfs.d/patchsetfs
 /usr/libexec/mc/extfs.d/rpm
 /usr/libexec/mc/extfs.d/rpms+
-/usr/libexec/mc/extfs.d/s3+
 /usr/libexec/mc/extfs.d/trpm
 /usr/libexec/mc/extfs.d/u7z
 /usr/libexec/mc/extfs.d/uace
@@ -137,7 +146,6 @@ mv %{buildroot}/etc/mc/* %{buildroot}/usr/share/mc/
 /usr/libexec/mc/extfs.d/uar
 /usr/libexec/mc/extfs.d/uarc
 /usr/libexec/mc/extfs.d/uarj
-/usr/libexec/mc/extfs.d/uc1541
 /usr/libexec/mc/extfs.d/ucab
 /usr/libexec/mc/extfs.d/uha
 /usr/libexec/mc/extfs.d/ulha
@@ -358,6 +366,11 @@ mv %{buildroot}/etc/mc/* %{buildroot}/usr/share/mc/
 /usr/share/mc/syntax/yaml.syntax
 /usr/share/mc/syntax/yum-repo.syntax
 /usr/share/mc/syntax/yxx.syntax
+
+%files extras
+%defattr(-,root,root,-)
+/usr/libexec/mc/extfs.d/s3+
+/usr/libexec/mc/extfs.d/uc1541
 
 %files man
 %defattr(-,root,root,-)

@@ -1,2 +1,2 @@
-mc/extfs.d/uc1541
-mc/extfs.d/s3+
+/usr/libexec/mc/extfs.d/uc1541
+/usr/libexec/mc/extfs.d/s3+
