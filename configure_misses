@@ -1,6 +1,7 @@
 Configure miss: whether gcc accepts -Wassign-enum
 Configure miss: whether gcc accepts -Wconditional-uninitialized
 Configure miss: whether gcc accepts -Wmissing-variable-declarations
+Configure miss: __attribute__((fallthrough))
 Configure miss: konqueror
 Configure miss: CHECK
 Configure miss: slang/slang.h
@@ -27,9 +28,6 @@ Configure miss: dustat.h
 Configure miss: sys/fs/s5param.h usability
 Configure miss: sys/fs/s5param.h presence
 Configure miss: sys/fs/s5param.h
-Configure miss: sys/filsys.h usability
-Configure miss: sys/filsys.h presence
-Configure miss: sys/filsys.h
 Configure miss: statfs that truncates block counts
 Configure miss: nfs/vfs.h usability
 Configure miss: nfs/vfs.h presence
