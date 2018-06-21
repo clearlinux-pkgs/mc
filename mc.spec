@@ -4,22 +4,24 @@
 #
 Name     : mc
 Version  : 4.8.21
-Release  : 19
+Release  : 20
 URL      : http://ftp.midnight-commander.org/mc-4.8.21.tar.bz2
 Source0  : http://ftp.midnight-commander.org/mc-4.8.21.tar.bz2
 Summary  : Testing
 Group    : Development/Tools
 License  : GPL-3.0 MIT
 Requires: mc-bin
+Requires: mc-license
 Requires: mc-locales
+Requires: mc-man
 Requires: mc-data
-Requires: mc-doc
 BuildRequires : bison
 BuildRequires : check
 BuildRequires : flex
 BuildRequires : glib-dev
 BuildRequires : libssh2-dev
 BuildRequires : slang-dev
+Patch1: 0001-Support-stateless-fallback-of-mc-configuration.patch
 
 %description
 Multi-line description field
@@ -31,6 +33,8 @@ with "double", 'single quotes', and $weird | \characters i\n = i\\t, empty line.
 Summary: bin components for the mc package.
 Group: Binaries
 Requires: mc-data
+Requires: mc-license
+Requires: mc-man
 
 %description bin
 bin components for the mc package.
@@ -44,20 +48,20 @@ Group: Data
 data components for the mc package.
 
 
-%package doc
-Summary: doc components for the mc package.
-Group: Documentation
-
-%description doc
-doc components for the mc package.
-
-
 %package extras
 Summary: extras components for the mc package.
 Group: Default
 
 %description extras
 extras components for the mc package.
+
+
+%package license
+Summary: license components for the mc package.
+Group: Default
+
+%description license
+license components for the mc package.
 
 
 %package locales
@@ -68,15 +72,24 @@ Group: Default
 locales components for the mc package.
 
 
+%package man
+Summary: man components for the mc package.
+Group: Default
+
+%description man
+man components for the mc package.
+
+
 %prep
 %setup -q -n mc-4.8.21
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528170647
+export SOURCE_DATE_EPOCH=1529608333
 %configure --disable-static PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}
 
@@ -88,8 +101,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1528170647
+export SOURCE_DATE_EPOCH=1529608333
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/mc
+cp COPYING %{buildroot}/usr/share/doc/mc/COPYING
+cp doc/COPYING %{buildroot}/usr/share/doc/mc/doc_COPYING
 %make_install
 %find_lang mc
 ## make_install_append content
@@ -175,12 +191,6 @@ mv %{buildroot}/etc/mc/* %{buildroot}/usr/share/mc/
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/man/es/man1/mc.1
-/usr/share/man/hu/man1/mc.1
-/usr/share/man/it/man1/mc.1
-/usr/share/man/pl/man1/mc.1
-/usr/share/man/ru/man1/mc.1
-/usr/share/man/sr/man1/mc.1
 /usr/share/mc/edit.indent.rc
 /usr/share/mc/examples/macros.d/macro.0.sh
 /usr/share/mc/examples/macros.d/macro.1.sh
@@ -376,14 +386,27 @@ mv %{buildroot}/etc/mc/* %{buildroot}/usr/share/mc/
 /usr/share/mc/syntax/yum-repo.syntax
 /usr/share/mc/syntax/yxx.syntax
 
-%files doc
-%defattr(-,root,root,-)
-%doc /usr/share/man/man1/*
-
 %files extras
 %defattr(-,root,root,-)
 /usr/libexec/mc/extfs.d/s3+
 /usr/libexec/mc/extfs.d/uc1541
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/mc/COPYING
+/usr/share/doc/mc/doc_COPYING
+
+%files man
+%defattr(-,root,root,-)
+/usr/share/man/es/man1/mc.1
+/usr/share/man/hu/man1/mc.1
+/usr/share/man/it/man1/mc.1
+/usr/share/man/man1/mc.1
+/usr/share/man/man1/mcedit.1
+/usr/share/man/man1/mcview.1
+/usr/share/man/pl/man1/mc.1
+/usr/share/man/ru/man1/mc.1
+/usr/share/man/sr/man1/mc.1
 
 %files locales -f mc.lang
 %defattr(-,root,root,-)
