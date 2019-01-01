@@ -16,15 +16,11 @@ Configure miss: OS.h presence
 Configure miss: OS.h
 Configure miss: listmntent
 Configure miss: struct fsstat.f_fstypename
-Configure miss: listmntent of Cray/Unicos-9
 Configure miss: mntctl function and struct vmount
 Configure miss: sys/mntent.h usability
 Configure miss: sys/mntent.h presence
 Configure miss: sys/mntent.h
 Configure miss: whether to use statvfs64
-Configure miss: dustat.h usability
-Configure miss: dustat.h presence
-Configure miss: dustat.h
 Configure miss: sys/fs/s5param.h usability
 Configure miss: sys/fs/s5param.h presence
 Configure miss: sys/fs/s5param.h
@@ -35,3 +31,4 @@ Configure miss: nfs/vfs.h
 Configure miss: struct statvfs.f_type
 Configure miss: AIX defines
 Configure miss: Gpm_Repeat in -lgpm
+Configure miss: openpty
