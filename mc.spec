@@ -4,7 +4,7 @@
 #
 Name     : mc
 Version  : 4.8.22
-Release  : 21
+Release  : 22
 URL      : http://ftp.midnight-commander.org/mc-4.8.22.tar.xz
 Source0  : http://ftp.midnight-commander.org/mc-4.8.22.tar.xz
 Summary  : Testing
