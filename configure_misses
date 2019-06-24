@@ -1,19 +1,14 @@
 Configure miss: whether gcc accepts -Wassign-enum
 Configure miss: whether gcc accepts -Wconditional-uninitialized
 Configure miss: whether gcc accepts -Wmissing-variable-declarations
-Configure miss: __attribute__((fallthrough))
 Configure miss: konqueror
 Configure miss: CHECK
 Configure miss: slang/slang.h
 Configure miss: X
+Configure miss: sys/fs_types.h
+Configure miss: OS.h
 Configure miss: statlstat
 Configure miss: get_process_stats in -lseq
-Configure miss: sys/fs_types.h usability
-Configure miss: sys/fs_types.h presence
-Configure miss: sys/fs_types.h
-Configure miss: OS.h usability
-Configure miss: OS.h presence
-Configure miss: OS.h
 Configure miss: listmntent
 Configure miss: struct fsstat.f_fstypename
 Configure miss: mntctl function and struct vmount
