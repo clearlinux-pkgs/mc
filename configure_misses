@@ -5,6 +5,9 @@ Configure miss: konqueror
 Configure miss: CHECK
 Configure miss: slang/slang.h
 Configure miss: X
+Configure miss: stropts.h usability
+Configure miss: stropts.h presence
+Configure miss: stropts.h
 Configure miss: sys/fs_types.h
 Configure miss: OS.h
 Configure miss: statlstat
