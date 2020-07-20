@@ -30,3 +30,4 @@ Configure miss: struct statvfs.f_type
 Configure miss: AIX defines
 Configure miss: Gpm_Repeat in -lgpm
 Configure miss: openpty
+Configure miss: EXT2FS
