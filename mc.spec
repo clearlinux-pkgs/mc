@@ -4,7 +4,7 @@
 #
 Name     : mc
 Version  : 4.8.25
-Release  : 25
+Release  : 26
 URL      : http://ftp.midnight-commander.org/mc-4.8.25.tar.xz
 Source0  : http://ftp.midnight-commander.org/mc-4.8.25.tar.xz
 Summary  : No detailed summary available
