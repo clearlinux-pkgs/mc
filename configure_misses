@@ -4,7 +4,6 @@ Configure miss: EXT2FS
 Configure miss: Gpm_Repeat in -lgpm
 Configure miss: OS.h
 Configure miss: X
-Configure miss: get_process_stats in -lseq
 Configure miss: if S-Lang uses termcap
 Configure miss: konqueror
 Configure miss: listmntent
@@ -31,7 +30,7 @@ Configure miss: sys/fs_types.h
 Configure miss: sys/mntent.h
 Configure miss: sys/mntent.h presence
 Configure miss: sys/mntent.h usability
-Configure miss: whether gcc accepts -Wassign-enum
-Configure miss: whether gcc accepts -Wconditional-uninitialized
-Configure miss: whether gcc accepts -Wmissing-variable-declarations
+Configure miss: whether C compiler accepts -Wassign-enum
+Configure miss: whether C compiler accepts -Wconditional-uninitialized
+Configure miss: whether C compiler accepts -Wmissing-variable-declarations
 Configure miss: whether to use statvfs64
