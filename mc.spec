@@ -4,7 +4,7 @@
 #
 Name     : mc
 Version  : 4.8.28
-Release  : 32
+Release  : 33
 URL      : http://ftp.midnight-commander.org/mc-4.8.28.tar.xz
 Source0  : http://ftp.midnight-commander.org/mc-4.8.28.tar.xz
 Summary  : No detailed summary available
@@ -105,12 +105,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1648486792
+export SOURCE_DATE_EPOCH=1664929690
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
-export FCFLAGS="$FFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
-export FFLAGS="$FFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
-export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -fzero-call-used-regs=used "
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 %configure --disable-static PYTHON=/usr/bin/python3
 make  %{?_smp_mflags}
 
@@ -122,11 +122,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1648486792
+export SOURCE_DATE_EPOCH=1664929690
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/mc
-cp %{_builddir}/mc-4.8.28/COPYING %{buildroot}/usr/share/package-licenses/mc/fb6d282f2a4a3dacd3195c711a812f44a2b06e96
-cp %{_builddir}/mc-4.8.28/doc/COPYING %{buildroot}/usr/share/package-licenses/mc/fb6d282f2a4a3dacd3195c711a812f44a2b06e96
+cp %{_builddir}/mc-%{version}/COPYING %{buildroot}/usr/share/package-licenses/mc/fb6d282f2a4a3dacd3195c711a812f44a2b06e96 || :
+cp %{_builddir}/mc-%{version}/doc/COPYING %{buildroot}/usr/share/package-licenses/mc/fb6d282f2a4a3dacd3195c711a812f44a2b06e96 || :
 %make_install
 %find_lang mc
 ## install_append content
