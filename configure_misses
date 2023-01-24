@@ -9,8 +9,6 @@ Configure miss: konqueror
 Configure miss: listmntent
 Configure miss: mntctl function and struct vmount
 Configure miss: nfs/vfs.h
-Configure miss: nfs/vfs.h presence
-Configure miss: nfs/vfs.h usability
 Configure miss: pmap_getmaps
 Configure miss: pmap_getport
 Configure miss: pmap_set
@@ -19,18 +17,13 @@ Configure miss: rpc/pmap_clnt.h
 Configure miss: statfs that truncates block counts
 Configure miss: statlstat
 Configure miss: stropts.h
-Configure miss: stropts.h presence
-Configure miss: stropts.h usability
 Configure miss: struct fsstat.f_fstypename
 Configure miss: struct statvfs.f_type
 Configure miss: sys/fs/s5param.h
-Configure miss: sys/fs/s5param.h presence
-Configure miss: sys/fs/s5param.h usability
 Configure miss: sys/fs_types.h
 Configure miss: sys/mntent.h
-Configure miss: sys/mntent.h presence
-Configure miss: sys/mntent.h usability
 Configure miss: whether C compiler accepts -Wassign-enum
 Configure miss: whether C compiler accepts -Wconditional-uninitialized
 Configure miss: whether C compiler accepts -Wmissing-variable-declarations
 Configure miss: whether to use statvfs64
+Configure miss: x86_64-generic-linux-gnu-file
