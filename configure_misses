@@ -1,29 +1,62 @@
 Configure miss: AIX defines
+Configure miss: AIX defines
+Configure miss: CHECK
 Configure miss: CHECK
 Configure miss: EXT2FS
+Configure miss: EXT2FS
+Configure miss: Gpm_Repeat in -lgpm
 Configure miss: Gpm_Repeat in -lgpm
 Configure miss: OS.h
+Configure miss: OS.h
+Configure miss: X
 Configure miss: X
 Configure miss: if S-Lang uses termcap
+Configure miss: if S-Lang uses termcap
+Configure miss: konqueror
 Configure miss: konqueror
 Configure miss: listmntent
+Configure miss: listmntent
+Configure miss: major_t
+Configure miss: major_t
+Configure miss: minor_t
+Configure miss: minor_t
+Configure miss: mntctl function and struct vmount
 Configure miss: mntctl function and struct vmount
 Configure miss: nfs/vfs.h
+Configure miss: nfs/vfs.h
+Configure miss: pmap_getmaps
 Configure miss: pmap_getmaps
 Configure miss: pmap_getport
+Configure miss: pmap_getport
+Configure miss: pmap_set
 Configure miss: pmap_set
 Configure miss: pmap_set in -lrpc
+Configure miss: pmap_set in -lrpc
+Configure miss: rpc/pmap_clnt.h
 Configure miss: rpc/pmap_clnt.h
 Configure miss: statfs that truncates block counts
+Configure miss: statfs that truncates block counts
+Configure miss: statlstat
 Configure miss: statlstat
 Configure miss: stropts.h
+Configure miss: stropts.h
+Configure miss: struct fsstat.f_fstypename
 Configure miss: struct fsstat.f_fstypename
 Configure miss: struct statvfs.f_type
+Configure miss: struct statvfs.f_type
+Configure miss: sys/fs/s5param.h
 Configure miss: sys/fs/s5param.h
 Configure miss: sys/fs_types.h
+Configure miss: sys/fs_types.h
+Configure miss: sys/mntent.h
 Configure miss: sys/mntent.h
 Configure miss: whether C compiler accepts -Wassign-enum
+Configure miss: whether C compiler accepts -Wassign-enum
+Configure miss: whether C compiler accepts -Wconditional-uninitialized
 Configure miss: whether C compiler accepts -Wconditional-uninitialized
 Configure miss: whether C compiler accepts -Wmissing-variable-declarations
+Configure miss: whether C compiler accepts -Wmissing-variable-declarations
 Configure miss: whether to use statvfs64
+Configure miss: whether to use statvfs64
+Configure miss: x86_64-generic-linux-gnu-file
 Configure miss: x86_64-generic-linux-gnu-file
