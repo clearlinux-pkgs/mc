@@ -1,15 +1,15 @@
 Configure miss: AIX defines
 Configure miss: AIX defines
-Configure miss: CHECK
-Configure miss: CHECK
-Configure miss: EXT2FS
-Configure miss: EXT2FS
 Configure miss: Gpm_Repeat in -lgpm
 Configure miss: Gpm_Repeat in -lgpm
 Configure miss: OS.h
 Configure miss: OS.h
 Configure miss: X
 Configure miss: X
+Configure miss: check >= 0.9.10
+Configure miss: check >= 0.9.10
+Configure miss: ext2fs >= 1.42.4
+Configure miss: ext2fs >= 1.42.4
 Configure miss: if S-Lang uses termcap
 Configure miss: if S-Lang uses termcap
 Configure miss: konqueror
