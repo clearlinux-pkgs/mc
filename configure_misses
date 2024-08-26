@@ -10,8 +10,12 @@ Configure miss: check >= 0.9.10
 Configure miss: check >= 0.9.10
 Configure miss: ext2fs >= 1.42.4
 Configure miss: ext2fs >= 1.42.4
+Configure miss: gindent
+Configure miss: gindent
 Configure miss: if S-Lang uses termcap
 Configure miss: if S-Lang uses termcap
+Configure miss: indent
+Configure miss: indent
 Configure miss: konqueror
 Configure miss: konqueror
 Configure miss: listmntent
@@ -42,8 +46,8 @@ Configure miss: stropts.h
 Configure miss: stropts.h
 Configure miss: struct fsstat.f_fstypename
 Configure miss: struct fsstat.f_fstypename
-Configure miss: struct statvfs.f_type
-Configure miss: struct statvfs.f_type
+Configure miss: struct stat.st_mtimespec
+Configure miss: struct stat.st_mtimespec
 Configure miss: sys/fs/s5param.h
 Configure miss: sys/fs/s5param.h
 Configure miss: sys/fs_types.h
@@ -54,9 +58,11 @@ Configure miss: whether C compiler accepts -Wassign-enum
 Configure miss: whether C compiler accepts -Wassign-enum
 Configure miss: whether C compiler accepts -Wconditional-uninitialized
 Configure miss: whether C compiler accepts -Wconditional-uninitialized
-Configure miss: whether C compiler accepts -Wmissing-variable-declarations
-Configure miss: whether C compiler accepts -Wmissing-variable-declarations
 Configure miss: whether to use statvfs64
 Configure miss: whether to use statvfs64
 Configure miss: x86_64-generic-linux-gnu-file
 Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-gindent
+Configure miss: x86_64-generic-linux-gnu-gindent
+Configure miss: x86_64-generic-linux-gnu-indent
+Configure miss: x86_64-generic-linux-gnu-indent
