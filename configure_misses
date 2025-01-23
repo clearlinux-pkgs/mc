@@ -10,14 +10,16 @@ Configure miss: check >= 0.9.10
 Configure miss: check >= 0.9.10
 Configure miss: ext2fs >= 1.42.4
 Configure miss: ext2fs >= 1.42.4
+Configure miss: gcc option to enable large file support
+Configure miss: gcc option to enable large file support
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gindent
 Configure miss: gindent
 Configure miss: if S-Lang uses termcap
 Configure miss: if S-Lang uses termcap
 Configure miss: indent
 Configure miss: indent
-Configure miss: konqueror
-Configure miss: konqueror
 Configure miss: listmntent
 Configure miss: listmntent
 Configure miss: major_t
@@ -28,16 +30,6 @@ Configure miss: mntctl function and struct vmount
 Configure miss: mntctl function and struct vmount
 Configure miss: nfs/vfs.h
 Configure miss: nfs/vfs.h
-Configure miss: pmap_getmaps
-Configure miss: pmap_getmaps
-Configure miss: pmap_getport
-Configure miss: pmap_getport
-Configure miss: pmap_set
-Configure miss: pmap_set
-Configure miss: pmap_set in -lrpc
-Configure miss: pmap_set in -lrpc
-Configure miss: rpc/pmap_clnt.h
-Configure miss: rpc/pmap_clnt.h
 Configure miss: statfs that truncates block counts
 Configure miss: statfs that truncates block counts
 Configure miss: statlstat
@@ -54,10 +46,8 @@ Configure miss: sys/fs_types.h
 Configure miss: sys/fs_types.h
 Configure miss: sys/mntent.h
 Configure miss: sys/mntent.h
-Configure miss: whether C compiler accepts -Wassign-enum
-Configure miss: whether C compiler accepts -Wassign-enum
-Configure miss: whether C compiler accepts -Wconditional-uninitialized
-Configure miss: whether C compiler accepts -Wconditional-uninitialized
+Configure miss: whether the C compiler accepts -Wconditional-uninitialized
+Configure miss: whether the C compiler accepts -Wconditional-uninitialized
 Configure miss: whether to use statvfs64
 Configure miss: whether to use statvfs64
 Configure miss: x86_64-generic-linux-gnu-file
